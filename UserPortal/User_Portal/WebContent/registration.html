@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="CSS/styleRegistation.css">
+    <script src="https://kit.fontawesome.com/e7516258f9.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div class="main_box_reg">
+    <i class=" d-flex justify-content-center fas fa-address-book fa-3x"></i>
+    <h3 class="reg_h3">Registration Panel</h3>
+       <div class="inner_box_reg">
+            <form action="register" method="post">
+                <label for="first_name" class="form_reg_label">First Name</label>
+                <input class="box" type="text" name="first_name" id="first_name" required><br>
+                <label for="last_name" class="form_reg_label">Last Name</label>
+                <input class="box" type="text" name="last_name" id="last_name" required><br>
+                <label for="adds" class="form_reg_label">Address</label>
+                <input class="box" type="text" name="adds" id="adds" required><br>
+                <label for="phone" class="form_reg_label">Phone</label>
+                <input class="box" type="tel" name="phone" id="phone" required><br>
+                <label for="email" class="form_reg_label">Email</label>
+                <input class="box" type="email" name="email" id="email" required>
+                <span id="msg" style="color: red; font-size: 13px;"></span><br>
+                <label for="birth" class="form_reg_label">Birthdate</label>
+                <input class="box" type="date" name="birth" id="birth" required><br>
+                <label for="pass" class="form_reg_label">Password</label>
+                <input class="box" type="password" name="pass" id="pass" required><br>
+                
+                <input class="form_btn" type="submit" value="Register">
+                <input class="form_btn" type="button" value="Cancel"  onclick="openPage('login.jsp')" ><br><br><br>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+	$(document).ready(function(){
+		$('#email').change(function(){
+			var email = $('#email').val();
+			
+			$.ajax({
+				type:'POST',
+				data:{email:email},
+				url:'CheckValidation',
+				success:function(msg){
+					$('#msg').html(msg);
+				}
+			});
+		});
+	});
+	</script>
+
+<script type="text/javascript">
+ function openPage(pageURL)
+ {
+ window.location.href = pageURL;
+ }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+@charset "ISO-8859-1";
+
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.fas{
+    font-size: 30px;
+    color: black;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    background: #7f8c8d;
+    overflow: hidden;
+}
+ul li{
+    float: right;
+    list-style-type: none;
+}
+ul li a{
+    color: white;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+}
+a:hover{
+    background: #95a5a6;
+}
+.container{
+    background-color: white;
+    border-radius: 20px;
+    display: none;
+    position: absolute;
+    right: 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+.container a{
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.container a:hover{
+    background-color: #bdc3c7;
+}
+.dropdown:hover .container{
+    display: block;
+}
+.left{
+    width: 20%;
+    height: 680px;
+    background-color: white;
+    float: left;
+    border: 1px solid black;
+}
+.left a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    color: black;
+    border: 1px solid black;
+}
+.left a:hover{
+    background: #bdc3c7;
+}
+.right{
+    width: 80%;
+    height: 680px;
+    background-color:white;
+    float: left;
+    border: 1px solid black;
+}
+.head_line{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    border: 1px solid black;
+}
+.user_list{
+    width: 100%;
+    height: 70px;
+    border: 1px solid black;
+}
+.user_list h2{
+    float: left;
+    margin-left: 15px;
+    display: inline-block;
+}
+form{
+  float: right;
+}
+form.example input[type=text] {
+  margin-top: 15px;
+  padding: 8px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  margin-top: 15px;
+  margin-right: 15px;
+  width: 20%;
+  padding: 8px;
+  background: #a4b0be;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #57606f;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.main_pofile{
+    position: absolute;
+    left: 40%;
+    top: 35%;
+}
+.main_pass{
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    top: 35%;
+}
+.main_pass #pre,#new,#confirm{
+    width: 200px;
+}
+.main_pass .btn{
+    float: right;
+    margin: 20px;
+    cursor: pointer;
+    padding: 3px;
+    border-color: white;
+    border: 1px solid black;
+}
+.right table{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+.clear{
+    clear: both;
+}
+.footer{
+    width: 100%;
+    height: 25px;
+    background: #7f8c8d;
+    border: 1px solid black;
+}
